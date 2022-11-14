@@ -1,0 +1,25 @@
+<form [formGroup]="userRegisterForm" (ngSubmit)="submit()">
+
+
+  <input type="text" formControlName="name" placeholder="name">
+  <span *ngIf="userRegisterForm.controls['name'].errors">Este campo es requerido y tamaño min 4 caracteres</span>
+  <tr></tr>
+
+  <input type="text" formControlName="price" placeholder="price">
+  <span *ngIf="userRegisterForm.controls['name'].errors">Este campo es requerido y tamaño min 1 caracteres</span>
+  <tr></tr>
+
+  <input type="text" formControlName="description" placeholder="description">
+  <span *ngIf="userRegisterForm.controls['name'].errors">Este campo es requerido y tamaño min 4 caracteres</span>
+  <tr></tr>
+
+  <input type="text" formControlName="stars" placeholder="stars">
+  <span *ngIf="userRegisterForm.controls['name'].errors">Este campo es requerido y tamaño min 1 caracteres</span>
+  <tr></tr>
+
+  <input type="text" formControlName="image" placeholder="image">
+  <span *ngIf="userRegisterForm.controls['name'].errors">Este campo es requerido y tamaño min 5s caracteres</span>
+  <tr></tr>
+
+  <button>Enviar</button>
+</form>

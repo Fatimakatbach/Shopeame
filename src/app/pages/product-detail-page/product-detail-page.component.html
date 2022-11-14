@@ -1,0 +1,33 @@
+<div class="detalle">
+  <img src="{{product?.image}}" alt="">
+    <p>{{product?.name}}</p>
+    <p>{{product?.description}}</p>
+    <p>{{product?.price}}</p>
+    <p>{{product?.stars}}</p>
+    <button (click)="eliminar()"> Delete</button>
+  </div>
+  <div>
+    <form [formGroup]="userRegisterForm" (ngSubmit)="submit()">
+
+
+      <input type="text" formControlName="name" placeholder="name">
+      <span *ngIf="userRegisterForm.controls['name'].errors">Este campo es requerido y tamaño min 4 caracteres</span>
+      <tr></tr>
+
+      <input type="text" formControlName="price" placeholder="price">
+      <tr></tr>
+
+      <input type="text" formControlName="description" placeholder="description">
+      <tr></tr>
+
+      <input type="text" formControlName="stars" placeholder="stars">
+      <tr></tr>
+
+      <input type="text" formControlName="image" placeholder="image">
+      <tr></tr>
+
+
+
+      <button>Actualizar</button>
+    </form>
+  </div>
